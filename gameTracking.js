@@ -53,7 +53,8 @@ const gameState = {
 
             if (this.matchCheckArray.length > 1){
                 if (this.matchCheckArray[0].firstChild.innerHTML === this.matchCheckArray[1].firstChild.innerHTML){
-                this.matchCheckArray = ["MATCHED"];
+                this.matchCheckArray = [];
+                this.remainingMatches--;
             }
         }
     },

@@ -17,6 +17,6 @@ liveBoard.addEventListener('click', function(e){
             gameState.onEachClick(e.target);
             gameState.matchValidation();
         }
-        console.log(gameState.matchCheckArray[0]);
+        console.log(gameState.remainingMatches);
     }
 })
