@@ -18,5 +18,9 @@ liveBoard.addEventListener('click', function(e){
             gameState.matchValidation();
         }
         console.log(gameState.remainingMatches);
+
+        if (gameState.matchCheckArray.length === 0){
+            matchCheck.innerHTML = "<p>MATCHED!</p>";
+        }
     }
 })
