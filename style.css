@@ -1,0 +1,34 @@
+body {
+    position: absolute;
+    font-family: 'Cabin', sans-serif;
+    background-color: #4fe5d3;
+    width: 100%;
+}
+
+#game-board {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 30px auto;
+    padding: 0;
+    width: 80vw;
+    background-color: #fff;
+}
+
+.game-piece {
+    position: relative;
+    padding: 20px 0;
+    width: 33%;
+    text-align: center;
+}
+
+.game-piece:hover{
+    background-color: grey;
+}
+
+#match-check{
+    width: 100%;
+    text-align: center;
+}
