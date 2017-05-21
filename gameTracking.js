@@ -37,11 +37,9 @@ const gameState = {
     remainingMatches: 6,
     tries: 0,
     matchCheckArray: [],
-    guessPlus: function(){
+    incrementGuess: function(){
         this.tries++;
         document.getElementById("triesCount").innerHTML = this.tries;
     },
-    scoreCheck: function(){
-        //check that this is not the same node, but it is the same content
-    },
+    
 };

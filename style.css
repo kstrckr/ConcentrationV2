@@ -6,11 +6,9 @@ body {
 }
 
 #game-board {
-    display: block;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
     margin: 30px auto 5px auto;
     padding: none;
     width: 80vw;
@@ -19,27 +17,19 @@ body {
 
 .game-piece {
     position: relative;
-    margin: 0;
     width: 25%;
     text-align: center;
-}
-
-.game-piece p{
-    position: relative;
-    margin: 0;
-    padding: 20px 20px;
-    width: 100%;
-    height: 100%;
 }
 
 .game-piece:hover{
     background-color: grey;
 }
 
+
 #match-check{
-    width: 75px;
-    height: 75px;
+    width: 100%;
     background-color: grey;
     margin: 0 auto;
+    padding: 0;
     text-align: center;
 }
