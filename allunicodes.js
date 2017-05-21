@@ -787,4 +787,4 @@ let allCodes = [
 '&#xf16a;', 
 '&#xf166;' 
 ]
-console.log(allCodes.length);
+//console.log(allCodes.length);

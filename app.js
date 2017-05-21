@@ -1,5 +1,7 @@
 const gameBoard = {
 
+    gamePieces: [],
+
     pickRandomPairs: function(dimension, source){
         let randomArray = [];
         for (let i = 0; i < dimension; i++){
@@ -7,6 +9,11 @@ const gameBoard = {
             randomArray[i] = source[randomNum];
         }
         return randomArray;
+    },
+
+    loadGameBoardElements: function(targetClass){
+       let targets =  document.getElementsByClassName(targetClass);
+       return targets;
     },
 
     createAssignments: function(){
@@ -20,6 +27,8 @@ const gameBoard = {
             targetElements[i].innerHTML = `<p>${iconSource[i]}</p>`;
         }
     },
+
+    //add board reset method
 }
 
 const gameState = {
@@ -34,3 +43,6 @@ const gameState = {
         //check that this is not the same node, but it is the same content
     },
 };
+
+gameBoard.gamePieces = gameBoard.loadGameBoardElements('game-piece');
+console.log(gameBoard.gamePieces);
