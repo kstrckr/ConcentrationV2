@@ -20,7 +20,7 @@ body {
 .game-piece {
     position: relative;
     padding: 20px 0;
-    width: 33%;
+    width: 25%;
     text-align: center;
 }
 
