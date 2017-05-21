@@ -41,5 +41,21 @@ const gameState = {
         this.tries++;
         document.getElementById("triesCount").innerHTML = this.tries;
     },
+
+    onEachClick: function(inputTile){
+        this.matchCheckArray.push(inputTile);
+        if (this.matchCheckArray.length >2){
+            this.matchCheckArray.shift();
+        }
+    },
+
+    matchValidation: function(){
+
+            if (this.matchCheckArray.length > 1){
+                if (this.matchCheckArray[0].firstChild.innerHTML === this.matchCheckArray[1].firstChild.innerHTML){
+                this.matchCheckArray = ["MATCHED"];
+            }
+        }
+    },
     
 };

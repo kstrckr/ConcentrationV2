@@ -4,16 +4,19 @@ gameBoard.matchPairs = gameBoard.createAssignments(gameBoard.workingPairs);
 gameBoard.createIconTiles(gameBoard.gamePieces, gameBoard.matchPairs);
 
 const liveBoard = document.getElementById('game-board');
-console.log(liveBoard);
+
 liveBoard.addEventListener('click', function(e){
     if (e.target != liveBoard){
-        console.log(e.target.children);
+        let matchCheck = document.getElementById("match-check")
         if (e.target.children.length === 0){
-            document.getElementById("match-check").innerHTML = e.target.parentNode.innerHTML;
+           matchCheck.innerHTML += e.target.parentNode.innerHTML;
+           gameState.onEachClick(e.target.parentNode);
+           gameState.matchValidation();
         } else {
-            document.getElementById("match-check").innerHTML = e.target.innerHTML;
+            matchCheck.innerHTML += e.target.innerHTML;
+            gameState.onEachClick(e.target);
+            gameState.matchValidation();
         }
-        
+        console.log(gameState.matchCheckArray[0]);
     }
 })
-//console.log(gameBoard.matchPairs);
